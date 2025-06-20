@@ -1,0 +1,213 @@
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #262626;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+      padding: 16px;
+    }
+
+    /* Container */
+    .login-container {
+      background: rgba(255 255 255 / 0.9);
+      backdrop-filter: saturate(180%) blur(20px);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 380px;
+      padding: 48px 40px 56px;
+      box-shadow: 0 30px 60px rgb(204 35 104 / 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    /* Instagram logo text */
+    .logo {
+      font-family: 'Billabong', cursive;
+      font-size: 3rem;
+      color: #262626;
+      line-height: 1;
+      -webkit-text-stroke: 0.2px #262626;
+      user-select: none;
+      margin-bottom: 8px;
+    }
+
+    /* Form styles */
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    label {
+      position: relative;
+      font-size: 0.875rem;
+      color: #8e8e8e;
+      font-weight: 600;
+      user-select: none;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 14px 14px 14px 12px;
+      font-size: 1rem;
+      border: 1.5px solid #dbdbdb;
+      border-radius: 6px;
+      transition: border-color 0.3s ease;
+      outline-offset: 2px;
+      outline-color: transparent;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #a1336a;
+      outline-color: #a1336a;
+    }
+    input[type="text"].error,
+    input[type="password"].error {
+      border-color: #ed4956;
+      outline-color: #ed4956;
+    }
+
+    .error-message {
+      font-size: 0.75rem;
+      color: #ed4956;
+      margin: 4px 0 -12px 2px;
+      font-weight: 600;
+      user-select: none;
+      min-height: 18px;
+    }
+
+    /* Login button */
+    button {
+      margin-top: 8px;
+      background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 14px 0;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      user-select: none;
+    }
+    button:disabled {
+      filter: grayscale(70%);
+      cursor: not-allowed;
+    }
+    button:not(:disabled):hover,
+    button:not(:disabled):focus-visible {
+      filter: brightness(1.1);
+      outline: none;
+    }
+
+    /* Divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 12px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #8e8e8e;
+    }
+    .divider:before,
+    .divider:after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background: #dbdbdb;
+      border-radius: 1px;
+    }
+
+    /* Facebook login */
+    .facebook-login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      color: #385185;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+    .facebook-login:hover,
+    .facebook-login:focus-visible {
+      color: #2a3e74;
+      outline: none;
+    }
+    .facebook-icon {
+      font-size: 24px;
+      user-select: none;
+    }
+
+    /* Forgot password */
+    .forgot-password {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #00376b;
+      font-weight: 600;
+      margin-top: 16px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .forgot-password:hover,
+    .forgot-password:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Sign-up prompt */
+    .signup-prompt {
+      background: white;
+      width: 100%;
+      max-width: 380px;
+      padding: 20px 0;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #262626;
+      box-shadow: 0 30px 60px rgb(204 35 104 / 0.15);
+      user-select: none;
+    }
+    .signup-prompt a {
+      color: #0095f6;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      user-select: none;
+    }
+    .signup-prompt a:hover,
+    .signup-prompt a:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+  
+    /* Responsive */
+    @media (max-width: 400px) {
+      .login-container {
+        padding: 32px 24px 40px;
+      }
+      button {
+        font-size: 1rem;
+      }
+    }
+  

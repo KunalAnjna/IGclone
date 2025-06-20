@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagram Login Page Clone</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  
+<link rel="stylesheet" href="inclone.css">
+</head>
+<body>
+  <main class="login-container" role="main" aria-label="Instagram login form">
+    <h1 class="logo" aria-label="Instagram">Instagram</h1>
+    <form id="login-form" novalidate>
+      <label for="username-input">Username</label>
+      <input type="text" id="username-input" name="username" autocomplete="username" required aria-describedby="username-error" aria-invalid="false" />
+      <div id="username-error" class="error-message" aria-live="assertive"></div>
+
+      <label for="password-input">Password</label>
+      <input type="password" id="password-input" name="password" autocomplete="current-password" required minlength="6" aria-describedby="password-error" aria-invalid="false" />
+      <div id="password-error" class="error-message" aria-live="assertive"></div>
+
+      <button type="submit" id="login-btn" disabled aria-disabled="true">Log In</button>
+    </form>
+
+    <div class="divider" aria-hidden="true">OR</div>
+
+     <a href="https://github.com/KunalAnjna/fbclone.git" class="facebook-login" tabindex="0" role="button" aria-label="Continue as Facebook user">
+      <span class="material-icons facebook-icon" aria-hidden="true">facebook</span> Continue with Facebook
+    </a>
+
+    <a href="#" class="forgot-password" tabindex="0">Forgot password?</a>
+  </main>
+
+  <section class="signup-prompt" aria-label="Create an account invitation">
+    Don't have an account? <a href="#" tabindex="0">Sign up</a>
+  </section>
+<script src="inclone.js"></script>
+
+</body>
+</html>
+
